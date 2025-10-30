@@ -1,10 +1,7 @@
-import { useContext, useReducer, useState } from "react";
-import authReducer from "./reducer/authReducer";
-import useAuth from "../routing/hooks/useAuth";
-import AuthContext from "./context/authContext";
+import useAuth from ".//hooks/useAuth";
 
 const LoginStatus = () => {
-  const { user, dispatch } = useContext(AuthContext);
+  const { user, dispatch } = useAuth();
 
   if (user)
     return (
@@ -21,7 +18,7 @@ const LoginStatus = () => {
     <div>
       <a
         onClick={() => {
-          dispatch({ type: "LOGIN", username: "edu.renau" });
+          dispatch({ type: "LOGIN", username: "eduard.renau" });
         }}
         href="#"
       >
