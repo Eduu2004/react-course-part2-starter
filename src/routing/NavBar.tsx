@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
+  // 7- EXCERCISE- WORKING WITH NESTED ROUTES
   return (
     <nav
       className="navbar navbar-expand-lg"
@@ -11,14 +14,10 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" href="#">
-                Home
-              </a>
+              <Link to={"/"} className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Users
-              </a>
+              <Link to={"/users"} className="nav-link">Users</Link>
             </li>
           </ul>
         </div>
